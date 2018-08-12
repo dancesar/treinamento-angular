@@ -9,7 +9,7 @@ export class PainelSimplesComponent implements OnInit {
 
   @Input() titulo;
   @Input() col;
-  @Input() tipo;
+  @Input() tipo = "info";
 
   constructor() { }
 
