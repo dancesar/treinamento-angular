@@ -10,6 +10,7 @@ import { MenuLateralComponent } from './barra-navegacao/menu-lateral/menu-latera
 import { ResumoComponent } from './resumo/resumo.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { ConsultaPorEspecializacaoComponent } from './consulta/consulta-por-especializacao/consulta-por-especializacao.component';
+import { ResumoService } from './resumo/resumo.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { ConsultaPorEspecializacaoComponent } from './consulta/consulta-por-espe
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ResumoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
