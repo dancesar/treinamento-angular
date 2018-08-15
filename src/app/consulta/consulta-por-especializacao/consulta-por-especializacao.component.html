@@ -1,9 +1,16 @@
-<app-consulta-por-especializacao
-  titulo = "Consultas Realizadas - Últimos 30 dias"
-  [consultas]="consultas.realizadas">
-</app-consulta-por-especializacao>
-
-<app-consulta-por-especializacao
-  titulo = "Consultas Realizadas - Próximos 30 dias"
-  [consultas]="consultas.marcadas">
-</app-consulta-por-especializacao>
+<app-painel-simples tipo="primary" titulo="{{titulo}}" col="6">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Especialidade</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let consulta of consultas">
+          <td>{{consulta.especialidade}}</td>
+          <td>{{consulta.quantidade}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </app-painel-simples>
