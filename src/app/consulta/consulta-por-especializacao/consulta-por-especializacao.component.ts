@@ -9,6 +9,7 @@ export class ConsultaPorEspecializacaoComponent implements OnInit {
 
   @Input() consultas;
   @Input() titulo;
+  @Input() erro;
 
   constructor() { }
 

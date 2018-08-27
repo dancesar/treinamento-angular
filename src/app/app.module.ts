@@ -1,3 +1,5 @@
+import { FaturamentoService } from './faturamento/faturamento.service';
+import { ConsultaService } from './consulta/consulta.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,6 +13,7 @@ import { ResumoComponent } from './resumo/resumo.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { ConsultaPorEspecializacaoComponent } from './consulta/consulta-por-especializacao/consulta-por-especializacao.component';
 import { ResumoService } from './resumo/resumo.service';
+import { FaturamentoComponent } from './faturamento/faturamento.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +23,15 @@ import { ResumoService } from './resumo/resumo.service';
     MenuLateralComponent,
     ResumoComponent,
     ConsultaComponent,
-    ConsultaPorEspecializacaoComponent
+    ConsultaPorEspecializacaoComponent,
+    FaturamentoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ResumoService],
+  providers: [ResumoService, ConsultaService, FaturamentoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,11 @@
 <app-consulta-por-especializacao
   titulo = "Consultas Realizadas - Últimos 30 dias"
-  [consultas]="consultas.realizadas">
+  [consultas]="consultas?.realizadas"
+  [erro]="erro">
 </app-consulta-por-especializacao>
 
 <app-consulta-por-especializacao
   titulo = "Consultas Realizadas - Próximos 30 dias"
-  [consultas]="consultas.marcadas">
+  [consultas]="consultas?.marcadas"
+  [erro]="erro">
 </app-consulta-por-especializacao>
